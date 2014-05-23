@@ -1,7 +1,7 @@
 package hcpclient_test
 
 import (
-	. "git.koofr.lan/go-hcpclient.git"
+	. "github.com/koofr/go-hcpclient"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
