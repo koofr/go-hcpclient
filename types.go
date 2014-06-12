@@ -11,6 +11,7 @@ type HcpObject struct {
 	Name     string
 	Length   int64
 	Modified *time.Time
+	ETag     string
 	Reader   io.ReadCloser
 }
 
@@ -23,5 +24,6 @@ func HcpObjectFromHeaders(path string, headers http.Header) *HcpObject {
 		Name:     path,
 		Length:   contentLength,
 		Modified: &modified,
+		ETag:     headers.Get("ETag"),
 	}
 }
